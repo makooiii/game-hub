@@ -6,7 +6,7 @@ import GameCardContainer from "./GameCardContainer";
 import { GameQuery } from "../App";
 
 interface Props {
-  gameQuery: GameQuery
+  gameQuery: GameQuery;
 }
 
 const GameGrid = ({ gameQuery }: Props) => {
@@ -17,7 +17,7 @@ const GameGrid = ({ gameQuery }: Props) => {
     <>
       {error && <Text>{error}</Text>}
 
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 5 }} padding="10px" spacing={3}>
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} padding="10px" spacing={6}>
         {isLoading &&
           skeletons.map(skeleton => (
             <GameCardContainer key={skeleton}>
